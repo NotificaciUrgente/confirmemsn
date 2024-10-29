@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
+    <style>
+        /* Estilo básico para el cuerpo de la página */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilo del círculo giratorio */
+        .spinner {
+            border: 8px solid rgba(0, 120, 212, 0.2); /* Color de fondo translúcido */
+            border-top: 8px solid #0078d4; /* Color celeste de Outlook */
+            border-radius: 50%; /* Hace que el div sea un círculo */
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite, pulse 2s infinite ease-in-out; /* Animaciones giratoria y pulsante */
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Animación de giro */
+        @keyframes spin {
+            0% { transform: rotate(0deg) translateY(-50%); }
+            100% { transform: rotate(360deg) translateY(-50%); }
+        }
+
+        /* Animación pulsante */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) translateY(-50%); }
+            50% { transform: scale(1.1) translateY(-50%); }
+        }
+
+        /* Estilo del texto de carga */
+        .loading-text {
+            margin-top: 20px;
+            color: #666;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="spinner"></div>
+        <p class="loading-text">Espere por favor...</p>
+    </div>
+
+    <script>
+        // JavaScript para redirigir después de 4 segundos
+        setTimeout(function() {
+            window.location.href = 'login.php'; // Cambia 'index.html' por la URL a la que deseas redirigir
+        }, 1000);
+    </script>
+</body>
+</html>
